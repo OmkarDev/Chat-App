@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat Web App</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+</head>
+
+<body>
+	<div class="chat-container">
+		<div class="members-list">
+			<h3>Members</h3>
+			<div class="member-buttons" id="membersList">
+				<button class="member-button online">Alice</button>
+				<button class="member-button offline" disabled>Bob</button>
+				<button class="member-button online">Charlie</button>
+				<button class="member-button offline" disabled>David</button>
+				<button class="member-button online">Eve</button>
+			</div>
+		</div>
+
+		<div class="chat-area">
+			<div class="chat-header">
+				<h2 id="chatTitle">Public Chat</h2>
+			</div>
+			<div class="messages" id="messages">
+			</div>
+			<form class="chat-input" id="chatInput">
+				<input type="text" id="messageInput" placeholder="Type a message..." autofocus>
+				<button id="sendBtn" type="submit">Send</button>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		let username = "[[${username}]]";
+		let userId = "[[${userId}]]";
+	</script>
+	<script src="script/script.js"></script>
+</body>
+
+</html>
